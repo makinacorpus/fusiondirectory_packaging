@@ -1,0 +1,157 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR FusionDirectory Project
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Pavel Borecki <pavel.borecki@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: FusionDirectory-109\n"
+"Report-Msgid-Bugs-To: bugs@fusiondirectory.org\n"
+"POT-Creation-Date: 2015-09-11 22:19+0200\n"
+"PO-Revision-Date: 2015-05-30 14:12+0000\n"
+"Last-Translator: fusiondirectory <contact@fusiondirectory.org>\n"
+"Language-Team: Czech (Czech Republic) (http://www.transifex.com/fusiondirectory/FusionDirectory-109/language/cs_CZ/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs_CZ\n"
+"Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#: admin/sudo/class_sudoOption.inc:82
+msgid "Unknown option"
+msgstr "Neznámá předvolba"
+
+#: admin/sudo/class_sudoOption.inc:83
+#, php-format
+msgid "The sudo option '%s' is invalid!"
+msgstr "Parametr %s pro sudo není platný!"
+
+#: admin/sudo/class_sudoOption.inc:278
+#, php-format
+msgid "%s (%s)"
+msgstr ""
+
+#: admin/sudo/class_sudoOption.inc:481
+msgid "Available options"
+msgstr "dostupné volby"
+
+#: admin/sudo/class_sudoOption.inc:484
+msgid "Option"
+msgstr "volba"
+
+#: admin/sudo/class_sudoOption.inc:484
+msgid "Add a new sudo option"
+msgstr "Přidat další volbu pro sudo"
+
+#: admin/sudo/class_sudoOption.inc:489 admin/sudo/class_sudoOption.inc:491
+msgid "Used sudo role options"
+msgstr "Použité volby role sudo"
+
+#: admin/sudo/class_sudoOption.inc:563
+msgid "Options"
+msgstr "Možnosti"
+
+#: admin/sudo/class_sudoOption.inc:564
+msgid "Sudo options"
+msgstr "nastavení sudo"
+
+#: admin/sudo/class_sudoManagement.inc:32 admin/sudo/class_sudoGeneric.inc:121
+#: config/sudo/class_sudoConfig.inc:42
+msgid "Sudo"
+msgstr "sudo"
+
+#: admin/sudo/class_sudoManagement.inc:33
+msgid "Sudo management"
+msgstr "Správa sudo"
+
+#: admin/sudo/class_sudoGeneric.inc:122 admin/sudo/class_sudoGeneric.inc:126
+msgid "Sudo role"
+msgstr "Role v sudo"
+
+#: admin/sudo/class_sudoGeneric.inc:141
+msgid "Role settings"
+msgstr "Nastavení role"
+
+#: admin/sudo/class_sudoGeneric.inc:146
+msgid "Name"
+msgstr "Název"
+
+#: admin/sudo/class_sudoGeneric.inc:146
+msgid "Name of the role"
+msgstr "Název role"
+
+#: admin/sudo/class_sudoGeneric.inc:151
+msgid "Description"
+msgstr "Popis"
+
+#: admin/sudo/class_sudoGeneric.inc:151
+msgid "Description for the new sudo role"
+msgstr "Popis pro novou roli sudo"
+
+#: admin/sudo/class_sudoGeneric.inc:156
+msgid "Commands"
+msgstr "příkazy"
+
+#: admin/sudo/class_sudoGeneric.inc:157
+msgid ""
+"A Unix command with optional command line arguments, potentially including "
+"globbing characters (aka wild cards)"
+msgstr "Unixový příkaz s volitelnými argumenty, případně obsahující zástupné znaky"
+
+#: admin/sudo/class_sudoGeneric.inc:163
+msgid "Run as (user)"
+msgstr "Spustit jako (uživatel)"
+
+#: admin/sudo/class_sudoGeneric.inc:164
+msgid "User(s) impersonated by sudo"
+msgstr "Uživatelé, ztělesnění v sudo"
+
+#: admin/sudo/class_sudoGeneric.inc:171
+msgid "Run as (group)"
+msgstr "Spustit jako (skupina)"
+
+#: admin/sudo/class_sudoGeneric.inc:172
+msgid "Group(s) impersonated by sudo"
+msgstr "Skupiny, ztělesněné prostřednictvím sudo"
+
+#: admin/sudo/class_sudoGeneric.inc:178
+msgid "Systems"
+msgstr "Systémy"
+
+#: admin/sudo/class_sudoGeneric.inc:178
+msgid "A host name, IP address or IP network"
+msgstr "Název počítače, IP adresa nebo síť"
+
+#: admin/sudo/class_sudoGeneric.inc:183
+msgid "Users and groups"
+msgstr "Uživatelé a skupiny"
+
+#: admin/sudo/class_sudoGeneric.inc:184
+msgid ""
+"A user name, user ID (prefixed with '#'), Unix group (prefixed with '%')"
+msgstr "Uživatelské jméno, identifikátor (předeslaný znakem #), unixová skupiny (předeslaná znakem %)"
+
+#: admin/sudo/class_sudoGeneric.inc:188
+msgid "Priority"
+msgstr "Priorita"
+
+#: admin/sudo/class_sudoGeneric.inc:188
+msgid "This rule priority compared to others"
+msgstr "Pořadí přednosti tohoto pravidla v porovnání s ostatními"
+
+#: config/sudo/class_sudoConfig.inc:28
+msgid "Sudo configuration"
+msgstr "Nastavení sudo"
+
+#: config/sudo/class_sudoConfig.inc:29
+msgid "FusionDirectory sudo plugin configuration"
+msgstr "Nastavení zásuvného modulu sudo pro FusionDirectory"
+
+#: config/sudo/class_sudoConfig.inc:45
+msgid "Sudo RDN"
+msgstr "Relativní rozlišený název pro sudo"
+
+#: config/sudo/class_sudoConfig.inc:45
+msgid "Branch in which sudoers will be stored"
+msgstr "Větev, ve které budou ukládáni držitelé práv sudo"

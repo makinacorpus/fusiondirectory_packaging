@@ -1,0 +1,156 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR FusionDirectory Project
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: FusionDirectory-109\n"
+"Report-Msgid-Bugs-To: bugs@fusiondirectory.org\n"
+"POT-Creation-Date: 2015-09-11 22:19+0200\n"
+"PO-Revision-Date: 2015-05-30 14:12+0000\n"
+"Last-Translator: fusiondirectory <contact@fusiondirectory.org>\n"
+"Language-Team: Portuguese (Brazil) (http://www.transifex.com/fusiondirectory/FusionDirectory-109/language/pt_BR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: pt_BR\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: admin/sudo/class_sudoOption.inc:82
+msgid "Unknown option"
+msgstr "Opção desconhecida"
+
+#: admin/sudo/class_sudoOption.inc:83
+#, php-format
+msgid "The sudo option '%s' is invalid!"
+msgstr "A opção SUDO '%s' é inválida"
+
+#: admin/sudo/class_sudoOption.inc:278
+#, php-format
+msgid "%s (%s)"
+msgstr "%s(%s)"
+
+#: admin/sudo/class_sudoOption.inc:481
+msgid "Available options"
+msgstr "Opções disponíveis"
+
+#: admin/sudo/class_sudoOption.inc:484
+msgid "Option"
+msgstr "Opção"
+
+#: admin/sudo/class_sudoOption.inc:484
+msgid "Add a new sudo option"
+msgstr "Adicionar nova opção de sudo"
+
+#: admin/sudo/class_sudoOption.inc:489 admin/sudo/class_sudoOption.inc:491
+msgid "Used sudo role options"
+msgstr "Opções de funções sudo utilizados"
+
+#: admin/sudo/class_sudoOption.inc:563
+msgid "Options"
+msgstr "Opções"
+
+#: admin/sudo/class_sudoOption.inc:564
+msgid "Sudo options"
+msgstr "Opções de sudo"
+
+#: admin/sudo/class_sudoManagement.inc:32 admin/sudo/class_sudoGeneric.inc:121
+#: config/sudo/class_sudoConfig.inc:42
+msgid "Sudo"
+msgstr "Sudo"
+
+#: admin/sudo/class_sudoManagement.inc:33
+msgid "Sudo management"
+msgstr "Gestação sudo"
+
+#: admin/sudo/class_sudoGeneric.inc:122 admin/sudo/class_sudoGeneric.inc:126
+msgid "Sudo role"
+msgstr "Função sudo"
+
+#: admin/sudo/class_sudoGeneric.inc:141
+msgid "Role settings"
+msgstr ""
+
+#: admin/sudo/class_sudoGeneric.inc:146
+msgid "Name"
+msgstr "Nome"
+
+#: admin/sudo/class_sudoGeneric.inc:146
+msgid "Name of the role"
+msgstr "Nome da atribuição"
+
+#: admin/sudo/class_sudoGeneric.inc:151
+msgid "Description"
+msgstr "Descrição"
+
+#: admin/sudo/class_sudoGeneric.inc:151
+msgid "Description for the new sudo role"
+msgstr "Descrição da nova função do sudo"
+
+#: admin/sudo/class_sudoGeneric.inc:156
+msgid "Commands"
+msgstr "Comandos"
+
+#: admin/sudo/class_sudoGeneric.inc:157
+msgid ""
+"A Unix command with optional command line arguments, potentially including "
+"globbing characters (aka wild cards)"
+msgstr "Um comando Unix com argumento de linha de comando opcional, potencialmente incluindo caracteres globais(aka wild card)"
+
+#: admin/sudo/class_sudoGeneric.inc:163
+msgid "Run as (user)"
+msgstr ""
+
+#: admin/sudo/class_sudoGeneric.inc:164
+msgid "User(s) impersonated by sudo"
+msgstr ""
+
+#: admin/sudo/class_sudoGeneric.inc:171
+msgid "Run as (group)"
+msgstr ""
+
+#: admin/sudo/class_sudoGeneric.inc:172
+msgid "Group(s) impersonated by sudo"
+msgstr ""
+
+#: admin/sudo/class_sudoGeneric.inc:178
+msgid "Systems"
+msgstr "Sistemas"
+
+#: admin/sudo/class_sudoGeneric.inc:178
+msgid "A host name, IP address or IP network"
+msgstr "Um nome de host, endereço IP ou rede IP"
+
+#: admin/sudo/class_sudoGeneric.inc:183
+msgid "Users and groups"
+msgstr "Usuários e grupos"
+
+#: admin/sudo/class_sudoGeneric.inc:184
+msgid ""
+"A user name, user ID (prefixed with '#'), Unix group (prefixed with '%')"
+msgstr "Um nome de usuário, ID(Prefixado com'#'), grupo Unix(prefixado com '%')"
+
+#: admin/sudo/class_sudoGeneric.inc:188
+msgid "Priority"
+msgstr ""
+
+#: admin/sudo/class_sudoGeneric.inc:188
+msgid "This rule priority compared to others"
+msgstr ""
+
+#: config/sudo/class_sudoConfig.inc:28
+msgid "Sudo configuration"
+msgstr "Configuração sudo"
+
+#: config/sudo/class_sudoConfig.inc:29
+msgid "FusionDirectory sudo plugin configuration"
+msgstr "Configuração de plugin sudo do FusionDirectory"
+
+#: config/sudo/class_sudoConfig.inc:45
+msgid "Sudo RDN"
+msgstr "sudo RDN"
+
+#: config/sudo/class_sudoConfig.inc:45
+msgid "Branch in which sudoers will be stored"
+msgstr "Filial em que sudoers serão armazenados"

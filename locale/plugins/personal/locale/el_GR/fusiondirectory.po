@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR FusionDirectory Project
+# This file is distributed under the same license as the PACKAGE package.
+# 
+# Translators:
+# Kostas Papadimas <pkst@eellak.gr>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: FusionDirectory-109\n"
+"Report-Msgid-Bugs-To: bugs@fusiondirectory.org\n"
+"POT-Creation-Date: 2015-09-11 22:19+0200\n"
+"PO-Revision-Date: 2015-10-06 11:26+0000\n"
+"Last-Translator: Kostas Papadimas <pkst@eellak.gr>\n"
+"Language-Team: Greek (Greece) (http://www.transifex.com/fusiondirectory/FusionDirectory-109/language/el_GR/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: el_GR\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: personal/personal/class_personalInfo.inc:30
+msgid "Site"
+msgstr "Ιστοσελίδα"
+
+#: personal/personal/class_personalInfo.inc:30
+msgid "Website the account is on"
+msgstr "Η ιστοσελίδα του λογαριασμού είναι στο"
+
+#: personal/personal/class_personalInfo.inc:36
+msgid "Id"
+msgstr "Id"
+
+#: personal/personal/class_personalInfo.inc:36
+msgid "Id of this user on this website"
+msgstr "Η Id του χρήστη σε αυτή την ιστοσελίδα"
+
+#: personal/personal/class_personalInfo.inc:85
+#: config/personal/class_personalConfig.inc:42
+msgid "Personal"
+msgstr "Προσωπικό"
+
+#: personal/personal/class_personalInfo.inc:86
+msgid "Personal informations"
+msgstr "Προσωπικές πληροφορίες"
+
+#: personal/personal/class_personalInfo.inc:101
+msgid "Personal info"
+msgstr "Προσωπικές πληροφορίες"
+
+#: personal/personal/class_personalInfo.inc:104
+msgid "Personal title"
+msgstr "Προσωπικός τίτλος"
+
+#: personal/personal/class_personalInfo.inc:104
+msgid "Personal title - Examples of personal titles are \"Ms\", \"Dr\", \"Prof\" and \"Rev\""
+msgstr "Προσωπικός τίτλος- Παραδείγματα είναι Ms\", \"Dr\", \"Prof\" και \"Rev\""
+
+#: personal/personal/class_personalInfo.inc:109
+msgid "Nickname"
+msgstr "Ψευδώνυμο"
+
+#: personal/personal/class_personalInfo.inc:109
+msgid "Nicknames for this user"
+msgstr "Ψευδώνυμα για αυτόν τον χρήστη"
+
+#: personal/personal/class_personalInfo.inc:114
+msgid "Date of birth"
+msgstr "Ημερομηνία Γέννησης"
+
+#: personal/personal/class_personalInfo.inc:119
+msgid "Sex"
+msgstr "Φύλο"
+
+#: personal/personal/class_personalInfo.inc:119
+msgid "Gender"
+msgstr "Φύλο"
+
+#: personal/personal/class_personalInfo.inc:126
+msgid "Contact"
+msgstr "Επαφή"
+
+#: personal/personal/class_personalInfo.inc:130
+msgid "Social account"
+msgstr "Λογαριασμός κοινωνικής δικτύωσης"
+
+#: personal/personal/class_personalInfo.inc:130
+msgid "Social accounts of this user"
+msgstr "Οι λογαριασμοί κοινωνικής δικτύωσης αυτού του χρήστη"
+
+#: personal/personal/class_personalInfo.inc:137
+msgid "Private email"
+msgstr "Προσωπικό email"
+
+#: personal/personal/class_personalInfo.inc:137
+msgid "Private email addresses of this user"
+msgstr "Οι προσωπικές διευθύνσεις email αυτού του χρήστη"
+
+#: personal/personal/class_socialHandlers.inc:68
+msgid "Facebook"
+msgstr "Facebook"
+
+#: personal/personal/class_socialHandlers.inc:78
+msgid "Twitter"
+msgstr "Twitter"
+
+#: personal/personal/class_socialHandlers.inc:98
+msgid "Google+"
+msgstr "Google+"
+
+#: personal/personal/class_socialHandlers.inc:118
+msgid "Diaspora*"
+msgstr "Diaspora*"
+
+#: personal/personal/class_socialHandlers.inc:131
+msgid "Diaspora accounts must look like user@pod"
+msgstr "Οι λογαριασμοί Diaspora πρέπει να μοιάζουν σαν user@pod"
+
+#: config/personal/class_personalConfig.inc:28
+msgid "Personal configuration"
+msgstr "Προσωπικές ρυθμίσεις"
+
+#: config/personal/class_personalConfig.inc:29
+msgid "FusionDirectory personal plugin configuration"
+msgstr "Ρύθμιση προσθέτου FusionDirectory personal"
+
+#: config/personal/class_personalConfig.inc:45
+msgid "Allow use of private email for password recovery"
+msgstr "Να επιτρέπεται η χρήση του προσωπικού email για ανάκτηση λογαριασμού"
+
+#: config/personal/class_personalConfig.inc:45
+msgid "Allow users to use their private email address for password recovery"
+msgstr "Να επιτρέπεται στους χρήστες η χρήση του προσωπικού email για ανάκτηση λογαριασμού"
