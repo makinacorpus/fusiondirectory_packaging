@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR FusionDirectory Project
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 # Benoit Mortier <benoit.mortier@opensides.be>, 2015
 # MCMic, 2015
@@ -4606,7 +4606,7 @@ msgstr "Veuillez cliquer ici pour envoyer un lien de réinitialisation"
 msgid ""
 "This dialog provides a simple way to change your password. Enter the new "
 "password (twice) in the fields below and press the 'Change' button."
-msgstr "Cette fenêtre vous permet de changer votre mot de passe de manière simple. Entrez le mot de passe actuel et le nouveau mot de passe (deux fois) dans les champs ci-dessous et appuyez sur le bouton 'Changer'."
+msgstr "Cette fenêtre vous permet de changer votre mot de passe de manière simple. Entrez le nouveau mot de passe (deux fois) dans les champs ci-dessous et appuyez sur le bouton 'Changer'."
 
 #: ihtml/themes/default/recovery.tpl.c:26
 #: ihtml/themes/default/recovery.tpl.c:29
@@ -5017,3 +5017,16 @@ msgstr "Pendant l'inspection LDAP, nous allons chercher les problèmes classique
 #: setup/setup_migrate.tpl.c:5
 msgid "Check again"
 msgstr "Vérifier à nouveau"
+
+msgid "Informations to reset password for"
+msgstr "Les informations pour réinitialiser le mot de passe de"
+
+msgid "have been sent to email address"
+msgstr "ont été envoyées à cette addresse"
+
+msgid "Warning : this email is only valid for"
+msgstr "Attention: cet email n'est valide que pour"
+
+msgid "minutes."
+msgstr "minutes."
+

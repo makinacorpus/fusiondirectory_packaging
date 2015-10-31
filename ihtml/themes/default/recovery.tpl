@@ -46,8 +46,8 @@
     </p>
 {elseif $step==3}
     <p class="infotext">
-      {t}Informations to reset password for {$uid} have been sent to email address {$email_address}{/t}<br/>
-      <div style="color:red;">{t}Warning : this email is only valid for {$delay_allowed} minutes.{/t}</div>
+      {t}Informations to reset password for{/t} {$uid} {t}have been sent to email address{/t} {$email_address}<br/>
+      <div style="color:red;">{t}Warning : this email is only valid for{/t} {$delay_allowed} {t}minutes.{/t}</div>
     </p>
 {elseif $step==4}
     <p class="infotext">
