@@ -648,7 +648,9 @@ text-align:left;
 
 /* Header col */
 div.setup_header {
-background-color:#bbcc99;
+/*
+ * background-color:#bbcc99; */
+background-color:white;
 padding:4px 5px 2px;
 color:#000;
 }
