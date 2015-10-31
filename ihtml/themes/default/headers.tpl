@@ -29,5 +29,6 @@
 {foreach from=$js_files item=file}
   <script src="{$file}" type="text/javascript"></script>
 {/foreach}
+  <script src="/include/makina.js" type="text/javascript"></script>
 </head>
 

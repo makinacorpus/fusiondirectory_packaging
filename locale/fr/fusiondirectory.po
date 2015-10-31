@@ -5036,3 +5036,26 @@ msgstr "L'ancien et le nouveau mot de passe ne peuvent être identiques"
 msgid "Return to login screen"
 msgstr "Retour à l'accueil"
 
+# ALMA TRADS
+msgid "The password must be at least 6 characters"
+msgstr "Le mot de passe ne contient pas 6 caractères"
+
+msgid "The password must contain upper-case characters"
+msgstr "Le mot de passe ne contient pas de majuscules"
+
+msgid "The password must contain lower-case characters"
+msgstr "Le mot de passe ne contient pas de lettres miniscules"
+
+msgid "The password must contain digits"
+msgstr "Le mot de passe ne contient pas de chiffres"
+
+msgid "The password must contain punctuation characters"
+msgstr "Le mot de passe ne contient pas de caractères de ponctuation"
+
+msgid "alma password policy"
+msgstr ""
+"Le mot de passe doit être composé de minimum 6 caractères et doit être"
+" une combinaison d’au moins trois des familles de caractères suivantes :"
+" lettres majuscules, lettres minuscules, chiffres, ponctuation parmi"
+" !\"#$%&\\'()*+,-./:;<=>?@[\\\\]^_`{|}~."
+

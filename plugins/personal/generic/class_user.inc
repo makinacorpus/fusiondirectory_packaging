@@ -615,6 +615,39 @@ class user extends simplePlugin
       }
     }
 
+    // ALMA POLICIES
+    if ($new_password) {
+        $conditions = 0;
+        $errors = array();
+        if (strlen($new_password) < 6 ) {
+            array_push($errors, _('The password must be at least 6 characters'));
+        }
+        if (preg_match('/[A-Z]/', $new_password)) {
+            $conditions += 1;
+        } else {
+            array_push($errors, _('The password must contain upper-case characters'));
+        }
+        if (preg_match('/[a-z]/', $new_password)) {
+            $conditions += 1;
+        } else {
+            array_push($errors, _('The password must contain lower-case characters'));
+        }
+        if (preg_match('/\d/', $new_password)) {
+            $conditions += 1;
+        } else {
+            array_push($errors, _('The password must contain digits'));
+        }
+        if (preg_match("/['!\"#$%&()*+,\-.\/:;<=>?@\[\]^_`{|}~]/", $new_password)) {
+            $conditions += 1;
+        } else {
+            array_push($errors, _('The password must contain punctuation characters'));
+        }
+        if( ($conditions < 3) && $errors) {
+            array_unshift($errors, _("alma password policy"));
+            return implode("<br/>", $errors);
+        }
+    }
+
     // Perform FusionDirectory password policy checks
     if (($current_password !== NULL) && empty($current_password)) {
       return _('You need to specify your current password in order to proceed.');
