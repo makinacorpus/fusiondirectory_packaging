@@ -63,6 +63,7 @@ class ObjectsAttribute extends GenericDialogAttribute
         $this->displays[$i] = sprintf(_("Unknown type : %s"), LDAP::fix($attrs['dn']));
         $this->types[$i]    = 'I';
       }
+      natcasesort($this->displays);
     } else {
       $this->displays[$i] = sprintf(_("Non existing dn: %s"), LDAP::fix($this->value[$i]));
       $this->types[$i]    = 'I';

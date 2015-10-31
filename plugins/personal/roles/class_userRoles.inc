@@ -86,6 +86,7 @@ class userRoles extends simplePlugin
       }
       $groups[$dn] = $groupDisplay;
     }
+    natcasesort($groups);
     $this->attributesAccess['groupsMembership']->setInLdap(FALSE);
     $this->attributesAccess['groupsMembership']->attribute->setChoices(array_keys($groups), array_values($groups));
     if ($this->is_template) {
@@ -98,6 +99,7 @@ class userRoles extends simplePlugin
         'ogroup', NULL, NULL,
         '(member='.$this->dn.')'
       );
+        natcasesort($myGroups);
       $this->attributesAccess['groupsMembership']->setValue(array_keys($myGroups));
       $this->savedGroupsMembership = array_keys($myGroups);
     }
@@ -105,6 +107,7 @@ class userRoles extends simplePlugin
     /* Roles handling */
     $roles        = array();
     $rolesattrs  = objects::ls('role', array('cn' => 1,  'description' => 1));
+    natcasesort($roles);
     foreach($rolesattrs as $dn => $roleattr) {
       $roleDisplay = $roleattr['cn'];
       if(isset($roleattr['description'])) {
@@ -127,6 +130,7 @@ class userRoles extends simplePlugin
         'role', NULL, NULL,
         '(roleOccupant='.$this->dn.')'
       );
+      natcasesort($myRoles);
       $this->attributesAccess['rolesMembership']->setValue(array_keys($myRoles));
       $this->savedRolesMembership = array_keys($myRoles);
     }
