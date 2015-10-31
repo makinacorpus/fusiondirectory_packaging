@@ -254,7 +254,7 @@ class ogroup extends simplePlugin
     foreach ($res as $data) {
       $ws_dns[] = $data['dn'];
     }
-    $res = get_list("(&(member=*)(objectClass=gosaGroupOfNames)(|(gosaGroupObjects=[W])(gosaGroupObjects=[T])))", "none",
+    $res = get_list("(&(member=*)(|(objectClass=groupOfNames)(objectClass=gosaGroupOfNames))(|(gosaGroupObjects=[W])(gosaGroupObjects=[T])))", "none",
                     $base, array("dn","member"), GL_NO_ACL_CHECK | GL_SUBSEARCH);
     $this->used_workstations = array();
     foreach ($res as $og) {
