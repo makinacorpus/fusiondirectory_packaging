@@ -58,7 +58,7 @@ class ObjectsAttribute extends GenericDialogAttribute
           unset(ogroup::$objectTypes[$code]);
         }
       }
-      if (!isset($this->displays[$i])) {
+      if (isset($attrs['dn']) && !isset($this->displays[$i])) {
         trigger_error('Unkown type for "'.$attrs['dn'].'"');
         $this->displays[$i] = sprintf(_("Unknown type : %s"), LDAP::fix($attrs['dn']));
         $this->types[$i]    = 'I';
