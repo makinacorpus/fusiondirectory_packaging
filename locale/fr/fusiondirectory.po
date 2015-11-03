@@ -5030,3 +5030,5 @@ msgstr "Attention: cet email n'est valide que pour"
 msgid "minutes."
 msgstr "minutes."
 
+msgid "Passwords can't be the same"
+msgstr "L'ancien et le nouveau mot de passe ne peuvent être identiques"

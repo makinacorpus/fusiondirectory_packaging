@@ -213,6 +213,15 @@ class UserPasswordAttribute extends CompositeAttribute
       return $error;
     }
     if (($this->attributes[1]->getValue() != '') || ($this->attributes[2]->getValue() != '')) {
+        $oldhash = $this->attributes[0]->plugin->saved_attributes['userPassword'];
+        $npassword = $this->attributes[1]->getValue();
+        if($oldhash){
+            $tmp = passwordMethod::get_method($oldhash);
+            $nhash = $tmp->generate_hash($npassword);
+            if ($oldhash == $nhash) {
+                return array(_("Passwords can't be the same"));
+            }
+        }
       return user::reportPasswordProblems($this->plugin->dn, $this->attributes[1]->getValue(), $this->attributes[2]->getValue());
     }
   }
