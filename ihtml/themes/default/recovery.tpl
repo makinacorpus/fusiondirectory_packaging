@@ -101,7 +101,7 @@
 {elseif $changed}
     <div class="success">
       <img class="center" src="geticon.php?context=status&amp;icon=task-complete&amp;size=16" alt="{t}Success{/t}" title="{t}Success{/t}">&nbsp;<b>{t}Your password has been changed successfully.{/t}</b><br/>
-      <br/><a href="./">Return to login screen</a>
+      <br/><a href="./">{t}Return to login screen{/t}</a>
     </div>
 {else}
     <p class="infotext">

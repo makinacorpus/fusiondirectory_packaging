@@ -5032,3 +5032,7 @@ msgstr "minutes."
 
 msgid "Passwords can't be the same"
 msgstr "L'ancien et le nouveau mot de passe ne peuvent être identiques"
+
+msgid "Return to login screen"
+msgstr "Retour à l'accueil"
+
