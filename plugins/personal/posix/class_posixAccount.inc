@@ -437,7 +437,21 @@ class posixAccount extends simplePlugin
         $this->gecos = "";
       }
     }
-
+    $opwh = $this->parent->getBaseObject()->attributesAccess['userPassword']->getInitialValue();
+    $cpwh = $this->parent->getBaseObject()->userPassword;
+    if ($cpwh && ($opwh != $cpwh)) {
+        $reset = 0;
+        try {
+            $reset = (int)$this->shadowMax;
+        } catch (Exception $e) {}
+        if(!$reset) {
+            $reset = 365;
+        }
+        $rdate = date("d.m.Y", time()+(60*60*24*(1+$reset)));
+        if ($this->shadowExpire) {
+            $this->shadowExpire = $rdate;
+        }
+    }
     if (!$this->force_ids) {
       /* Handle uidNumber.
        * - use existing number if possible
