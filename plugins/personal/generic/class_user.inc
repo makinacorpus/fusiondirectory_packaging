@@ -500,6 +500,15 @@ class user extends simplePlugin
 
   function save()
   {
+    $pw = $this->attributesAccess['userPassword'];
+    if ($pw->getValue() != $pw->getInitialValue()){
+        if(in_array("shadowAccount", $this->attrs['objectClass'])) {
+            $userTabs = objects::open($this->dn, 'user');
+            $posix = $userTabs->by_object['posixAccount'];
+            $posix->forward_expiration_date();
+            $posix->save();
+        }
+    }
     parent::save();
 
     /* Update current locale settings, if we have edited ourselves */

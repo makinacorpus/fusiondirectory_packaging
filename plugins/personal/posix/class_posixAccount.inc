@@ -428,6 +428,20 @@ class posixAccount extends simplePlugin
     return $message;
   }
 
+  function forward_expiration_date() {
+    $reset = 0;
+    try {
+        $reset = (int)$this->shadowMax;
+    } catch (Exception $e) {}
+    if(!$reset) {
+        $reset = 365;
+    }
+    $rdate = date("d.m.Y", time()+(60*60*24*(1+$reset)));
+    if ($this->shadowExpire && ($this->shadowExpire != $rdate)) {
+        $this->shadowExpire = $rdate;
+    }
+  }
+
   function prepare_save()
   {
     /* Fill gecos */
@@ -440,17 +454,7 @@ class posixAccount extends simplePlugin
     $opwh = $this->parent->getBaseObject()->attributesAccess['userPassword']->getInitialValue();
     $cpwh = $this->parent->getBaseObject()->userPassword;
     if ($cpwh && ($opwh != $cpwh)) {
-        $reset = 0;
-        try {
-            $reset = (int)$this->shadowMax;
-        } catch (Exception $e) {}
-        if(!$reset) {
-            $reset = 365;
-        }
-        $rdate = date("d.m.Y", time()+(60*60*24*(1+$reset)));
-        if ($this->shadowExpire) {
-            $this->shadowExpire = $rdate;
-        }
+        $this->forward_expiration_date();
     }
     if (!$this->force_ids) {
       /* Handle uidNumber.
