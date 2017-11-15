@@ -1001,9 +1001,39 @@ class PasswordAttribute extends StringAttribute
     return $this->renderAcl($display);
   }
 
+  function getExtentedPasswordLabel() {
+      $id = $this->getHtmlId();
+      $label = '';
+      if ($id == "userPassword_password" ) {
+          $trad = _("userPassword_passwordAlt");
+          $label = "<span style=\"font-weight:bold;clear:both;\">$trad </span><br>";
+      }
+      return $label;
+  }
+
+  function renderAttribute(&$attributes, $readOnly)
+  {
+    $id = $this->getHtmlId();
+    if ($this->visible) {
+      if ($readOnly) {
+        $input = '{literal}'.htmlentities($this->getValue(), ENT_COMPAT, 'UTF-8').'{/literal}';
+      } elseif (is_object($this->plugin) && $this->plugin->is_template) {
+        $input = $this->renderTemplateInput();
+      } else {
+        $input = $this->renderFormInput();
+      }
+      $attributes[$this->getLdapName()] = array(
+        'htmlid'      => $this->getForHtmlId(),
+        'label'       => $this->getExtentedPasswordLabel().'{literal}'.$this->getLabel().'{/literal}'.($this->isRequired()?'{$must}':''),
+        'description' => ($this->isRequired()?sprintf(_("%s (required)"), $this->getDescription()):$this->getDescription()),
+        'input'       => $input,
+      );
+    }
+  }
+
   function renderTemplateInput ()
   {
-    return parent::renderFormInput();
+      return parent::renderFormInput();
   }
 }
 

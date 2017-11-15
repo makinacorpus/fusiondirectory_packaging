@@ -50,8 +50,9 @@
       <div style="color:red;">{t}Warning : this email is only valid for{/t} {$delay_allowed} {t}minutes.{/t}</div>
     </p>
 {elseif $step==4}
-    <p class="infotext">
-      {t}This dialog provides a simple way to change your password. Enter the new password (twice) in the fields below and press the 'Change' button.{/t}
+    <p class="infotext" style="font-size: 20px !important">
+      {t}This dialog provides a simple way to change your password.{/t} <br/>
+      <strong >{t}Enter the new password (twice) in the fields below and press the 'Change' button.{/t}</strong>
     </p>
 
     <div class="ruler"></div>

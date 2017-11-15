@@ -627,6 +627,9 @@ msgid ""
 "locked!"
 msgstr ""
 
+msgid "userPassword_passwordAlt"
+msgstr "Please input twice your password bellow"
+
 #: plugins/admin/users/class_userManagement.inc:195
 msgid "Unlock account"
 msgstr ""

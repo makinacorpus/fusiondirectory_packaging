@@ -22,6 +22,13 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
+
+msgid "This dialog provides a simple way to change your password."
+msgstr "Cette fenêtre vous permet de changer votre mot de passe de manière simple."
+
+msgid "Enter the new password (twice) in the fields below and press the 'Change' button."
+msgstr "Entrez le nouveau mot de passe (deux fois) dans les champs ci-dessous et appuyez sur le bouton 'Changer'."
+
 #: plugins/generic/welcome/main.inc:25
 #, php-format
 msgid "Welcome %s!"
@@ -893,6 +900,9 @@ msgstr "Méthode de chiffrement des mots de passe"
 #: setup/setup_migrate_adminAccount.tpl.c:14
 msgid "Password"
 msgstr "Mot de passe"
+
+msgid "userPassword_passwordAlt"
+msgstr "Saisissez 2x votre mot de passe"
 
 #: plugins/personal/generic/class_user.inc:51
 msgid "Password (Leave empty if you do not wish to change it)"

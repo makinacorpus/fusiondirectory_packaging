@@ -24,6 +24,14 @@
       </tr>
       <tr>
         <td>
+          <strong>{t}Input your password twice below{/t}:&nbsp;</strong>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr> 
+      <tr>
+        <td>
           {t}Password{/t}:&nbsp;
         </td>
         <td>
