@@ -53,6 +53,7 @@
     <p class="infotext" style="font-size: 20px !important">
       {t}This dialog provides a simple way to change your password.{/t} <br/>
       <strong >{t}Enter the new password (twice) in the fields below and press the 'Change' button.{/t}</strong>
+      <br /><em>{t}alma password policy{/t}</em>
     </p>
 
     <div class="ruler"></div>

@@ -902,7 +902,10 @@ msgid "Password"
 msgstr "Mot de passe"
 
 msgid "userPassword_passwordAlt"
-msgstr "Saisissez 2x votre mot de passe"
+msgstr ""
+"Saisissez 2x votre mot de passe : 12 caractères minimum et doit contenir des chiffres et caractères minuscules, "
+"majuscules et spéciaux parmi "
+" !\"#$%&\\'()*+,-./:;<=>?@[\\\\]^_`{|}~."
 
 #: plugins/personal/generic/class_user.inc:51
 msgid "Password (Leave empty if you do not wish to change it)"
@@ -5047,8 +5050,8 @@ msgid "Return to login screen"
 msgstr "Retour à l'accueil"
 
 # ALMA TRADS
-msgid "The password must be at least 6 characters"
-msgstr "Le mot de passe ne contient pas 6 caractères"
+msgid "The password must be at least 12 characters"
+msgstr "Le mot de passe ne contient pas 12 caractères"
 
 msgid "The password must contain upper-case characters"
 msgstr "Le mot de passe ne contient pas de majuscules"
@@ -5064,8 +5067,7 @@ msgstr "Le mot de passe ne contient pas de caractères de ponctuation"
 
 msgid "alma password policy"
 msgstr ""
-"Le mot de passe doit être composé de minimum 6 caractères et doit être"
-" une combinaison d’au moins trois des familles de caractères suivantes :"
-" lettres majuscules, lettres minuscules, chiffres, ponctuation parmi"
+"Le mot de passe doit être composé de minimum 12 caractères et doit "
+"contenir des lettres majuscules, des lettres minuscules, des chiffres, "
+"des caractères spéciaux parmi "
 " !\"#$%&\\'()*+,-./:;<=>?@[\\\\]^_`{|}~."
-
