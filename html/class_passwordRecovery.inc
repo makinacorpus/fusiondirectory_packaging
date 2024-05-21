@@ -366,7 +366,7 @@ class passwordRecovery {
     /* Check for SSL connection */
     $ssl = "";
     $smarty->assign("ssl", "");
-    if (!isset($_SERVER['HTTPS']) || !stristr($_SERVER['HTTPS'], "on")) {
+    if (!((!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') || isset($_SERVER['HTTPS']) && stristr($_SERVER['HTTPS'], "on")   )) {
       if (empty($_SERVER['REQUEST_URI'])) {
         $ssl = "https://".$_SERVER['HTTP_HOST'].$_SERVER['PATH_INFO'];
       } else {
@@ -392,7 +392,7 @@ class passwordRecovery {
   function getPageURL()
   {
     $pageURL = "http";
-    if (isset($_SERVER['HTTPS']) && ($_SERVER["HTTPS"] == "on")) {
+    if ((!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https') || isset($_SERVER['HTTPS']) && stristr($_SERVER['HTTPS'], "on")   ) {
       $pageURL .= "s";
     }
     $pageURL .= "://".$_SERVER["SERVER_NAME"];
