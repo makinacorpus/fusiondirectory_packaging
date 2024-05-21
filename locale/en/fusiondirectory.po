@@ -631,7 +631,7 @@ msgid "userPassword_passwordAlt"
 msgstr ""
 "Please input twice your password bellow: 12 characters minimum and must "
 "contain numbers and lowercase, uppercase and special characters among "
-" !\"#$%&\\'()*+,-./:;<=>?@[\\\\]^_`{}~."
+" !\"#$%&\\'()*+,-./:;<=>?@[\\\\]^_`{|}~."
 
 #: plugins/admin/users/class_userManagement.inc:195
 msgid "Unlock account"
