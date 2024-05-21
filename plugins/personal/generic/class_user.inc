@@ -628,9 +628,7 @@ class user extends simplePlugin
     if ($new_password) {
         $conditions = 0;
         $errors = array();
-        if (strlen($new_password) >= 12) {
-            $conditions += 1;
-        } else {
+        if (strlen($new_password) < 12) {
             array_push($errors, _('The password must be at least 12 characters'));
         }
         if (preg_match('/[A-Z]/', $new_password)) {
@@ -653,7 +651,7 @@ class user extends simplePlugin
         } else {
             array_push($errors, _('The password must contain punctuation characters'));
         }
-        if($conditions < 5) {
+        if( ($conditions < 4) && $errors) {
             array_unshift($errors, _("alma password policy"));
             return implode("<br/>", $errors);
         }
