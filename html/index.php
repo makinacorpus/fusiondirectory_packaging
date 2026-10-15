@@ -314,6 +314,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
       session::global_set('connected', 1);
       $config->checkLdapConfig(); // check that newly installed plugins have their configuration in the LDAP
       session::global_set('DEBUGLEVEL', $config->get_cfg_value('DEBUGLEVEL'));
+
+      /* CVE-2022-36179: regenerate the session id after a successful login
+         to avoid session fixation (upstream commit d84cf05, FusionDirectory 1.3.1) */
+      session_regenerate_id();
+
       header ("Location: main.php?global_check=1");
       exit;
     }
