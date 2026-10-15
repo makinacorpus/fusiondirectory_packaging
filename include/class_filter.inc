@@ -165,7 +165,10 @@ class filter
     if (isset($element['maxlength'])) {
       $maxlength = $element['maxlength'];
     }
-    $result = "<input class='filter_textfield' id='$tag' name='$tag' type='text' size='$size' maxlength='{$maxlength}' value='".$this->elementValues[$tag]."'>";
+    /* The value comes from the POSTed form, it must be escaped (same fix as
+       upstream commit e554b5691b, FusionDirectory 1.3 security audit). ENT_QUOTES
+       because the attribute is single-quoted. */
+    $result = "<input class='filter_textfield' id='$tag' name='$tag' type='text' size='$size' maxlength='{$maxlength}' value='".htmlentities($this->elementValues[$tag], ENT_QUOTES, 'UTF-8')."'>";
     if (isset($element['autocomplete'])) {
       $frequency  = "0.5";
       $characters = "1";
