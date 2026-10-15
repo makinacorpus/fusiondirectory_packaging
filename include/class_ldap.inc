@@ -994,11 +994,13 @@ class LDAP
   /*!
    * \brief Success
    *
-   * \return boolean TRUE if Success is found in $error, else return FALSE
+   * \return boolean TRUE if $error is exactly 'Success', else return FALSE
    */
   function success()
   {
-    return preg_match('/Success/i', $this->error);
+    /* CVE-2019-11187: strict comparison, a failed bind error such as
+       "Could not bind to uid=...success..." must never count as a success */
+    return (trim($this->error) === 'Success');
   }
 
   /*!
