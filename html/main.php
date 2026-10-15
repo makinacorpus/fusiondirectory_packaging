@@ -169,7 +169,7 @@ if (isset($_GET['plug']) && $plist->plugin_access_allowed($_GET['plug'])) {
   session::global_set('plugin_dir', $plugin_dir);
   if ($plugin_dir == '') {
     new log('security', 'fusiondirectory', '', array(), "main.php called with invalid plug parameter \"$plug\"");
-    header ('Location: index.php?message=invalidparameter&plug='.$plug);
+    header ('Location: index.php?message=invalidparameter&plug='.urlencode($plug));
     exit;
   }
 } else {

@@ -184,6 +184,9 @@ if (($config->get_cfg_value("forcessl") == "TRUE") && ($ssl != '')) {
   exit;
 }
 
+/* CVE-2022-36180: $message is plain text, login.tpl HTML-escapes it with
+   {$message|escape}. Only known message keys are handled, the raw value of the
+   "message" parameter is never reflected in the page. */
 if (isset($_REQUEST['message'])) {
   switch($_REQUEST['message']) {
     case 'expired':
@@ -193,13 +196,23 @@ if (isset($_REQUEST['message'])) {
       $message = _('Your IP has changed!');
       break;
     case 'invalidparameter':
-      $message = sprintf(_('Invalid plugin parameter "%s"!'), $_REQUEST['plug']);
+      $plugParam = (isset($_REQUEST['plug']) ? $_REQUEST['plug'] : '');
+      $message   = sprintf(_('Invalid plugin parameter "%s"!'), $plugParam);
       break;
     case 'nosession':
       $message = _('No session found!');
       break;
     default:
-      $message = $_REQUEST['message'];
+      /* Unknown message key: ignore it */
+      /* Do not display an unknown message (which is also shown in red below the login form), such as with this
+       * malicious link: `index.php?message=Votre+compte+est+bloqué,+appelez+le+01…`
+       * Apparently, all calls to `index.php?message=` in the code use the keys `expired`, `newip`, `nosession`, and
+       * `invalidparameter`. All of these have an explicit case above. Therefore, the `default` branch was not used
+       * by any application code.
+       *
+       * If needed: $message = $_REQUEST['message']; (ex: link form external applications)
+       */
+      $message = '';
   }
 }
 

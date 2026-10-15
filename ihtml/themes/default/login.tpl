@@ -58,7 +58,7 @@
   </div>
   <div id="window_footer" class="plugbottom">
     <div>
-    {$message}
+    {$message|escape}
     </div>
     <div>
       <!-- Display error message on demand -->
