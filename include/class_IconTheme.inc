@@ -192,6 +192,12 @@ class IconTheme
   }
   static public function findThemeIcon($theme, $context, $icon, $size)
   {
+    /* CVE-2025-32807 (CWE-35): $icon comes from $_GET['icon'] in geticon.php and
+       ends up in a file path, so only plain icon names are accepted
+       (same check as upstream FusionDirectory 1.5, commit 9edefd0b) */
+    if (!preg_match('/^[a-zA-Z0-9_\-]+$/', $icon)) {
+      die('Error: wrong icon name received');
+    }
     if (!isset($_SESSION[self::$session_var])) {
       die('Error: no theme found in session');
     }
